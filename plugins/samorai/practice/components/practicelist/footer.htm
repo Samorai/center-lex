@@ -1,0 +1,15 @@
+{% for key,practice in practices %}
+
+{%if key % 5 == 0  and opened == 1 and key != current %}
+    </ul>
+    {%set opened = 0%}
+{%endif%}
+
+{%if key % 5 == 0 %}
+    <ul class="{% if key == 0%}left-quick-links alignleft{%endif%}">
+    {% set opened = 1 %}
+    {% set current = key %}
+{%endif%}<li><i class="fa fa-angle-right"></i><a href="">{{practice.name}}</a></li>
+
+{%if loop.last and opened == 1%}</ul>{%endif%}
+{% endfor %}

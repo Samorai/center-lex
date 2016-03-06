@@ -1,0 +1,11 @@
+fields:
+    language:
+        label: Язык
+        span: auto
+        type: text
+    team:
+        label: 'Член команды'
+        nameFrom: name
+        descriptionFrom: description
+        span: auto
+        type: relation

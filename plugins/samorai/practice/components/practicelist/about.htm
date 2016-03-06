@@ -1,0 +1,13 @@
+{% for key,practice in practices %}
+    <div class="col-lg-4 col-md-4 col-sm-4" style="float: left;">
+        <div class="single-featured-item text-center">
+            <div class="featured-icon">
+                <i class="fa fa-gavel"></i>
+            </div>
+            <div class="featured-text">
+                <h4>{{practice.name}}</h4>
+                <p>{{practice.small_text}}</p>
+            </div>
+        </div>
+    </div>
+{%endfor%}

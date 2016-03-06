@@ -1,0 +1,23 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table samorai_team_members'
+    - builder_table_create_samorai_team_members.php
+1.0.3:
+    - 'Created table samorai_team_education'
+    - builder_table_create_samorai_team_education.php
+1.0.4:
+    - 'Updated table samorai_team_education'
+    - builder_table_update_samorai_team_education.php
+1.0.5:
+    - 'Updated table samorai_team_members'
+    - builder_table_update_samorai_team_members.php
+1.0.6:
+    - 'Created table samorai_team_languages'
+    - builder_table_create_samorai_team_languages.php
+1.0.7:
+    - 'Updated table samorai_team_members'
+    - builder_table_update_samorai_team_members_2.php
+1.0.8:
+    - 'Updated table samorai_team_education'
+    - builder_table_update_samorai_team_education_2.php

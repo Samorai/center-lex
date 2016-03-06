@@ -1,0 +1,54 @@
+fields:
+    name:
+        label: Имя
+        span: auto
+        type: text
+    slug:
+        label: Алиас
+        span: auto
+        preset:
+            field: name
+            type: slug
+        type: text
+    position:
+        label: Должность
+        span: auto
+        type: text
+    phone:
+        label: Телефон
+        span: auto
+        type: text
+    email:
+        label: Email
+        span: auto
+        type: text
+    experiences:
+        label: Опыт
+        size: huge
+        span: full
+        type: textarea
+    facebook:
+        label: Facebook
+        span: auto
+        type: text
+    linkedin:
+        label: Linkedin
+        span: auto
+        type: text
+    google:
+        label: Google
+        span: auto
+        type: text
+    twitter:
+        label: Twitter
+        span: auto
+        type: text
+    practices:
+        label: Практики
+        type: relation
+        nameFrom: name
+    image:
+        label: Image
+        mode: image
+        span: auto
+        type: fileupload

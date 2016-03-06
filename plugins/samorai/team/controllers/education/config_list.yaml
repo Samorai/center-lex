@@ -1,0 +1,11 @@
+list: $/samorai/team/models/education/columns.yaml
+modelClass: Samorai\Team\Models\Education
+title: Education
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'samorai/team/education/update/:id'

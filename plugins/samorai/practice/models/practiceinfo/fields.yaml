@@ -1,0 +1,29 @@
+fields:
+    name:
+        label: Название
+        span: auto
+        type: text
+    alias:
+        label: Алиас
+        span: auto
+        dependsOn: {  }
+        defaultFrom: name
+        preset:
+            field: name
+            type: slug
+        type: text
+    text:
+        label: 'Полное описание'
+        size: giant
+        span: full
+        type: richeditor
+    small_text:
+        label: 'Короткое описание'
+        size: small
+        span: full
+        type: textarea
+    image:
+        label: Image
+        mode: image
+        span: auto
+        type: fileupload

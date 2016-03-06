@@ -1,0 +1,27 @@
+{% for member in members %}
+<!--Start Single Attorney-->
+<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+    <div class="single-attorney">
+        <div class="attorney-image-holder">
+            <img src="{{member.image.path}}" alt="">
+            <div class="attorney-overlay">
+                <div class="phone-and-mail">
+                    <p>{%if member.phone%}{{member.phone}}{%endif%}</p>
+                    <p>{%if member.email%}{{member.email}}{%endif%}</p>
+                </div>
+                <div class="attorney-ninus-icon">
+                    <img src="/themes/center-lex/assets/img/attorney-ninus-icon.png" alt="">
+                </div>
+            </div>
+            <div class="attorney-plus-icon">
+                <img src="/themes/center-lex/assets/img/attorney-plus-icon.png" alt="">
+            </div>
+        </div>
+        <div class="attorney-name text-center">
+            <h5>{{member.name}}</h5>
+            <p>{{member.position}}</p>
+        </div>
+    </div>
+</div>
+<!--End Single Attorney-->
+{%endfor%}

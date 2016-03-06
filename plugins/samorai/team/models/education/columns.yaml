@@ -1,0 +1,11 @@
+columns:
+    year:
+        label: 'Год окончания'
+        type: text
+    name:
+        label: Название
+        type: text
+    team_members:
+        label: Член команды
+        relation: team_members
+        select: name

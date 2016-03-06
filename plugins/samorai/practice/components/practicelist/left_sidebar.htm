@@ -1,0 +1,21 @@
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+    <div class="practice-right-sidebar">
+        <!--Start practice right single sidebar-->
+        <div class="practice-right-single-sidebar">
+            <div class="practice-widget-items">
+                {%for practice in practices%}
+                <!--Start Practice widget single-item-->
+                <div class="fix practice-widget-single-item">
+                    <div class="fix widget-lawyer-image">
+                        <img src="{{practice.image.path}}" alt="">
+                    </div>
+                    <div class="fix widget-lawyer-name">
+                        <h4><a href="">{{practice.name}}</a></h4>
+                    </div>
+                </div>
+                {%endfor%}
+            </div>
+        </div>
+        <!--End practice right single sidebar-->
+    </div>
+</div>

@@ -1,0 +1,11 @@
+name: Practices
+modelClass: Samorai\Practice\Models\PracticeInfo
+form: $/samorai/practice/models/practiceinfo/fields.yaml
+defaultRedirect: samorai/practice/practices
+create:
+    redirect: 'samorai/practice/practices/update/:id'
+    redirectClose: samorai/practice/practices
+update:
+    redirect: samorai/practice/practices
+    redirectClose: samorai/practice/practices
+preview: {  }

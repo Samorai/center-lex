@@ -1,0 +1,41 @@
+<section id="our-attorneys-area" class="anim-5-all home">
+    <div class="container">
+        <div class="row">
+            <div class="our-attorneys">
+                <div class="section-title text-center">
+                    <span>{{"Наша команда"|_}}</span>
+                    <h2><span>{{"Наши сотрудники"|_}}</span></h2>
+                </div>
+                {% for member in members %}
+                <!--Start Single Attorney-->
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="single-attorney">
+                        <div class="attorney-image-holder">
+                            <img src="{{member.image.path}}" alt="">
+                            <div class="attorney-overlay">
+                                <div class="social-links">
+                                    {% if member.facebook %}<a href="{{member.facebook}}" target="_blank"><i class="fa fa-facebook mysocial_style"></i></a>{%endif%}
+                                    {% if member.twitter %}<a href="{{member.twitter}}" target="_blank"><i class="fa fa-twitter mysocial_style"></i></a>{%endif%}
+                                    {% if member.google %}<a href="{{member.google}}" target="_blank"><i class="fa fa-google-plus mysocial_style"></i></a>{%endif%}
+                                    {% if member.linkedin %}<a href="{{member.linkedin}}" target="_blank"><i class="fa fa-linkedin mysocial_style"></i></a>{%endif%}
+                                </div>
+                                <div class="attorney-ninus-icon">
+                                    <img src="/themes/center-lex/assets/img/attorney-ninus-icon.png" alt="">
+                                </div>
+                            </div>
+                            <div class="attorney-plus-icon">
+                                <img src="/themes/center-lex/assets/img/attorney-plus-icon-golden.png" alt="">
+                            </div>
+                        </div>
+                        <div class="attorney-name text-center">
+                            <h5>{{member.name}}</h5>
+                            <p>{{member.position}}</p>
+                        </div>
+                    </div>
+                </div>
+                <!--End Single Attorney-->
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

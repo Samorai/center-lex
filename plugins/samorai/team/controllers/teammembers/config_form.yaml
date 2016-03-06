@@ -1,0 +1,11 @@
+name: TeamMembers
+modelClass: Samorai\Team\Models\TeamMembers
+form: $/samorai/team/models/teammembers/fields.yaml
+defaultRedirect: samorai/team/teammembers
+create:
+    redirect: 'samorai/team/teammembers/update/:id'
+    redirectClose: samorai/team/teammembers
+update:
+    redirect: samorai/team/teammembers
+    redirectClose: samorai/team/teammembers
+preview: {  }

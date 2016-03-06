@@ -1,0 +1,51 @@
+<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+    <div class="single-attorney-left-img">
+        <img src="{{member.image.path}}" alt="">
+    </div>
+</div>
+
+
+<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 single-attorney-right-padding0">
+    <div class="single-attorney-right">
+        <img src="/themes/center-lex/assets/img/single-attorney-right.png" alt="">
+        <div class="single-attorney-right-content">
+            <div class="single-attorney-name">
+                <h3>{{member.name}}</h3>
+                <h5>{{member.position}}</h5>
+            </div>
+            <div class="single-attorney-info">
+                <ul>
+                    <li class="single-attorney-phn">{%if member.phone%}{{member.phone}}{%endif%}</li>
+                    <li class="single-attorney-envelop">{%if member.email%}{{member.email}}{%endif%}</li>
+                </ul>
+            </div>
+            <div class="single-attorney-socila-link">
+                {% if member.facebook %}<a href="{{member.facebook}}" target="_blank"><i class="fa fa-facebook mysocial_style"></i></a>{%endif%}
+                {% if member.twitter %}<a href="{{member.twitter}}" target="_blank"><i class="fa fa-twitter mysocial_style"></i></a>{%endif%}
+                {% if member.google %}<a href="{{member.google}}" target="_blank"><i class="fa fa-google-plus mysocial_style"></i></a>{%endif%}
+                {% if member.linkedin %}<a href="{{member.linkedin}}" target="_blank"><i class="fa fa-linkedin mysocial_style"></i></a>{%endif%}
+            </div>
+            <div class="single-attorney-title">
+                <h3><span>{{"Practice Areas"|_}}:</span></h3>
+            </div>
+            <div class="single-attorney-law-list">
+                <ul class="left-law-list">
+                {% for practice in member.practices %}
+                    <li>{{practice.name}}</li>
+                {%endfor%}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="single-attorney-bottom">
+        <div class="section-title">
+            <h2><span>{{"Professional experiences"|_}}</span></h2>
+        </div>
+        <div class="single-attorney-bottom-text">
+            {{member.experiences|raw}}
+        </div>
+    </div>
+</div>

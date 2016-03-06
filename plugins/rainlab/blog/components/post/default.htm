@@ -1,0 +1,25 @@
+{% set post = __SELF__.post %}
+
+
+<img src="{{post.main_image.path}}" alt="">
+<div class="fix blog-post-date">
+    <h1><b>{{ post.published_at|date('d') }}</b> <br> {{ post.published_at|date('M') }}</h1>
+</div>
+<div class="single-bolg-title">
+    <h3>{{post.name}}</h3>
+</div>
+<!--Start blog details top text-->
+<div class="blog-details-top-text">
+    {{ post.content_html|raw }}
+</div>
+<!--End blog details top text-->
+<!--Start blog details middle text-->
+<div class="blog-details-middle-info">
+    {% for image in post.featured_images %}
+        <img
+                data-src="{{ image.filename }}"
+                src="{{ image.path }}"
+                alt="{{ image.description }}"
+                style="max-width: 100%" />
+    {% endfor %}
+</div>

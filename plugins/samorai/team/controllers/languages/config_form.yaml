@@ -1,0 +1,10 @@
+name: Languages
+form: $/samorai/team/models/language/fields.yaml
+modelClass: Samorai\Team\Models\Language
+defaultRedirect: samorai/team/languages
+create:
+    redirect: 'samorai/team/languages/update/:id'
+    redirectClose: samorai/team/languages
+update:
+    redirect: samorai/team/languages
+    redirectClose: samorai/team/languages

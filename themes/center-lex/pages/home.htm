@@ -1,0 +1,179 @@
+title = "Home"
+url = "/"
+layout = "default"
+is_hidden = 0
+child_of = "mey_no_parent"
+hide_crumb = 0
+remove_crumb_trail = 0
+crumb_disabled = 0
+
+[team]
+
+[practice_list]
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 3
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "about"
+postPage = "blog.detail"
+==
+<!-- #banner -->
+<section id="banner">
+    <div class="banner-container">
+        <div class="banner home-v1">
+            <ul>
+
+
+                <li
+                        class="slider-3"
+                        data-transition="fade"
+                        data-slotamount="7"
+                        data-thumb="/themes/center-lex/assets/img/slider/2.jpg"
+                        data-title="WE ARE AVAILABLE">
+
+                    <img
+                            src="/themes/center-lex/assets/img/slider/2.jpg"
+                            data-bgrepeat="no-repeat"
+                            data-bgfit="cover"
+                            data-bgposition="center center"
+                            alt="slider image">
+
+                    <div class="caption sfl sfb tp-resizeme caption-1 text-center"
+                         data-x="0"
+                         data-y="400"
+                         data-speed="700"
+                         data-start="1700"
+                         data-easing="easeOutBack"
+                    >
+                        <h1>We Offer Our Clients Only</h1>
+                    </div>
+
+                    <div class="caption sfr sfb tp-resizeme caption-2 large text-center"
+                         data-x="0"
+                         data-y="460"
+                         data-speed="700"
+                         data-start="2000"
+                         data-easing="easeOutBack"
+                    >
+                        <h1>Expert Legal Advice</h1>
+                    </div>
+                    <div class="caption sft tp-resizeme caption-4 italic text-center"
+                         data-x="0"
+                         data-y="543"
+                         data-speed="700"
+                         data-start="2500"
+                         data-easing="easeOutBack"
+                    >
+                        <p>Lorem ipsum dolor sit amet, cons ectetur elit. Vestibulum nec odios Suspe ndisse <br> cursus mal suada faci lisis. Lorem ipsum dolor sit ametion consectetur.</p>
+                    </div>
+                    <div class="caption sft tp-resizeme border text-center"
+                         data-x="0"
+                         data-y="610"
+                         data-speed="700"
+                         data-start="2700"
+                         data-easing="easeOutBack"
+                    >
+                        <span></span>
+                    </div>
+                    <div class="caption sft tp-resizeme icon text-center"
+                         data-x="0"
+                         data-y="680"
+                         data-speed="700"
+                         data-start="3000"
+                         data-easing="easeOutBack"
+                    >
+                        <i class="flaticon-justice4"></i>
+                    </div>
+
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</section> <!-- /#banner -->
+
+
+{%partial "home.call.to.action.htm"%}
+<!--Start welcome area-->
+<section id="welcome-area">
+    <div class="container">
+        {%partial "home.attorney.htm"%}
+    </div>
+</section>
+<!--End welcome area-->
+
+<!--Start Featured Services area-->
+<section id="featured-services-area">
+    <div class="container">
+        <div class="featured-services">
+            <div class="section-title text-center">
+                <span>Our Practice Areas</span>
+                <h2><span>Our featured services</span></h2>
+            </div>
+            {% component 'practice_list' %}
+        </div>
+    </div>
+</section>
+<!--End Featured Services area-->
+
+<!--Start Case Evaluation area-->
+<section id="case-evaluation-area" class="anim-5-all">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12">
+                <div class="case-evaluation-form">
+                    <div class="case-evaluation-form-title">
+                        <h1>Free Case Evaluation</h1>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <input type="text" placeholder="Frist Name">
+                        </div>
+                        <div class="col-lg-6">
+                            <input type="text" placeholder="Last Name">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <input type="text" placeholder="E-mail">
+                        </div>
+                        <div class="col-lg-6">
+                            <input type="text" placeholder="Phone">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <textarea placeholder="Message"></textarea>
+                        </div>
+                    </div>
+                    <button type="submit">submit now</button>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!--End Case Evaluation area-->
+
+<!--Start Our Attorneys Area-->
+{% component 'team' %}
+<!--End Our Attorneys Area-->
+
+<!--Start latest news area-->
+<section id="latest-news-area" class="anim-5-all">
+    <div class="container">
+        <div class="row">
+            <div class="latest-news">
+                <div class="section-title text-center">
+                    <span>Attorney News</span>
+                    <h2><span>latest news of attorney</span></h2>
+                </div>
+                {% component 'blogPosts::home.htm' %}
+            </div>
+        </div>
+    </div>
+</section>
+<!--End latest news area-->

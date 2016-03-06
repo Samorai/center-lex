@@ -1,0 +1,156 @@
+[practice_list]
+==
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{{ this.page.title }}</title>
+    <meta name="description" content="{{ this.page.meta_description }}">
+    <meta name="title" content="{{ this.page.meta_title }}">
+    <link rel="icon" type="image/png" href="{{ 'assets/img/favicon.png'|theme }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{{ [
+            'assets/css/style.css',
+            'assets/css/responsive.css'
+        ]|theme }}" rel="stylesheet">
+    <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+<body>
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!--Start Top section-->
+<header class="stricky anim-5-all">
+    <div class="container">
+        <div class="logo pull-left">
+            <a href="/">
+                <img src="/themes/center-lex/assets/img/logo-2.png" alt="Logo image">
+            </a>
+        </div>
+        <nav class="mainmenu pull-right">
+            <div class="nav-holder">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About us</a></li>
+                    <li class="dropdown">
+                        <a href="/team">Attorney</a>
+                        <ul class="submenu">
+                            <li><a href="/team/person">Attorney Profile</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="/practice/default">Practice Areas</a>
+                        <ul class="submenu">
+                            <li><a href="/practice/default">Practice Two</a></li>
+                            <li><a href="/practice/default">Practice Three</a></li>
+                            <li><a href="/practice/default">Practice Four</a></li>
+                            <li><a href="/practice/default">Practice Five</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="/blog">blog</a>
+                    </li>
+                    <li><a href="/contacts">contact us</a></li>
+                </ul>
+            </div>
+            <div class="nav-expander">
+                <ul>
+                    <li><button class="nav-collapser"><i class="fa fa-bars"></i></button></li>
+                    <!--<li><button class="header-search-toggler"><i class="icon icon-Search"></i></button></li>-->
+                </ul>
+            </div>
+        </nav>
+        <!--<div class="search-box">-->
+            <!--<input type="text" placeholder="Search Here...">-->
+            <!--<button type="submit"><i class="icon icon-Search"></i></button>-->
+        <!--</div>-->
+    </div>
+</header>
+<!--End Top section-->
+
+
+
+
+{% page %}
+
+<!--End legal problem area-->
+
+<!--Start Footer widget area-->
+<section id="footer-widget-area">
+    <div class="container">
+        <div class="row">
+            <!--Start Single Footer widget-->
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="single-footer-widget">
+                    <div class="footer-logo">
+                        <img src="/themes/center-lex/assets/img/footer-logo.png" alt="">
+                    </div>
+                    <div class="widget-text">
+                        <p>{{"Footer_about_text"|_}}</p>
+                    </div>
+
+                    <div class="widget-social-links">
+                        {%partial "footer.social.links.htm"%}
+                    </div>
+                </div>
+            </div>
+            <!--End Single Footer widget-->
+            <!--Start Single Footer widget-->
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="single-footer-widget">
+                    <div class="quick-links">
+                        <h3>{{"Quick links"|_}}</h3>
+                        {% component 'practice_list::footer.htm' %}
+                    </div>
+                </div>
+            </div>
+            <!--End Single Footer widget-->
+            <!--Start Single Footer widget-->
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="single-footer-widget">
+                    <div class="widget-get-intouch">
+                        <h3>{{"Get in Touch"|_}}</h3>
+                        <ul>
+                            {%partial "footer.right.htm"%}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--End Single Footer widget-->
+
+        </div>
+    </div>
+</section>
+<!--End Footer widget area-->
+
+<!--Start Footer area-->
+<section id="footer-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5">
+                <div class="copy-right-text">
+                    <p>Copyright © Center Lex 2016. All rights reserved. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--End Footer area-->
+
+
+<script src="{{ [
+            'assets/js/vendor/jquery-1.11.3.min.js',
+            '/assets/js/bootstrap.min.js',
+            'assets/js/jquery.themepunch.tools.min.js',
+            'assets/js/jquery.themepunch.revolution.min.js',
+            'assets/js/vendor/modernizr-2.8.3.min.js',
+            'assets/js/owl.carousel.min.js',
+            'assets/js/jquery.appear.js',
+            'assets/js/jquery.countTo.js',
+            'assets/js/plugins.js',
+            'assets/js/main.js'
+        ]|theme }}"></script>
+</body>
+</html>

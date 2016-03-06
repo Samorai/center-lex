@@ -1,0 +1,11 @@
+title: Practices
+modelClass: Samorai\Practice\Models\PracticeInfo
+list: $/samorai/practice/models/practiceinfo/columns.yaml
+recordUrl: 'samorai/practice/practices/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

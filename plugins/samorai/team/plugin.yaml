@@ -1,0 +1,24 @@
+plugin:
+    name: 'samorai.team::lang.plugin.name'
+    description: 'samorai.team::lang.plugin.description'
+    author: Samorai
+    icon: oc-icon-gear
+    homepage: ''
+navigation:
+    team:
+        label: Команда
+        url: samorai/team/teammembers
+        icon: icon-life-ring
+        sideMenu:
+            team-members:
+                label: 'Члены команды'
+                url: /samorai/team/teammembers
+                icon: icon-signal
+            team-education:
+                label: Образование
+                url: /samorai/team/education
+                icon: icon-skyatlas
+            team-languages:
+                label: Языки
+                url: /samorai/team/languages
+                icon: icon-skype

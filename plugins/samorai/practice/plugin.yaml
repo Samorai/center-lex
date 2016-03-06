@@ -1,0 +1,11 @@
+plugin:
+    name: 'samorai.practice::lang.plugin.name'
+    description: 'samorai.practice::lang.plugin.description'
+    author: Samorai
+    icon: oc-icon-adjust
+    homepage: ''
+navigation:
+    practice-main:
+        label: Практики
+        url: samorai/practice/practices
+        icon: icon-life-ring

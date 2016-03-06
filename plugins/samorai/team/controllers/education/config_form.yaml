@@ -1,0 +1,10 @@
+name: Education
+form: $/samorai/team/models/education/fields.yaml
+modelClass: Samorai\Team\Models\Education
+defaultRedirect: samorai/team/education
+create:
+    redirect: 'samorai/team/education/update/:id'
+    redirectClose: samorai/team/education
+update:
+    redirect: samorai/team/education
+    redirectClose: samorai/team/education

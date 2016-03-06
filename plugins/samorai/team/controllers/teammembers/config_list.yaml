@@ -1,0 +1,11 @@
+title: TeamMembers
+modelClass: Samorai\Team\Models\TeamMembers
+list: $/samorai/team/models/teammembers/columns.yaml
+recordUrl: 'samorai/team/teammembers/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: 1
+showCheckboxes: 1
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
