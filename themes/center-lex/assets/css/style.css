@@ -596,6 +596,9 @@ css:
 .single-featured-text {
   padding-left: 13px;
 }
+.single-featured-text h5 a{
+    color: black;
+}
 .single-featured-text p {
   font-family: 'Open Sans', sans-serif; 
 }
@@ -771,6 +774,9 @@ css:
   padding-bottom: 12px;
   padding-top: 17px;
   transition: all .5s ease;
+}
+.attorney-name h5 a{
+    color: white;
 }
 .single-attorney:hover .attorney-name {
   background: #B89B5E;
@@ -3196,8 +3202,11 @@ width: 44px;
 }
 .single-attorney-law-list ul li {
   color: #777777;
-  font-family: "Open Sans",sans-serif;
-  line-height: 35px;
+    font-family: "Open Sans",sans-serif;
+    line-height: 35px;
+}
+.single-attorney-law-list ul li a{
+    color: #777777;
 }
 a.appintment-button {
   background: #b89b5e none repeat scroll 0 0;

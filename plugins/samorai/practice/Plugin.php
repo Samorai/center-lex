@@ -8,6 +8,7 @@ class Plugin extends PluginBase
     {
         return [
             'Samorai\Practice\Components\PracticeList' => 'practice_list',
+            'Samorai\Practice\Components\Practice' => 'practice_info',
         ];
     }
 

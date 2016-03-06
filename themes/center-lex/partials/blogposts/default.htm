@@ -1,0 +1,38 @@
+<div class="blog-items">
+    {% for post in posts %}
+    <!--Start Single blog item-->
+    <div class="single-blog-item">
+        <div style="height: 250px;"><img src="{{post.main_image.path}}" alt="" style="height: 100%;"></div>
+        <div class="fix blog-post-date">
+            <h1><b>{{ post.published_at|date('d') }}</b> <br> {{ post.published_at|date('M') }}</h1>
+        </div>
+        <div class="single-bolg-title">
+            <h3><a href="/blog/post/{{post.slug}}">{{ post.title }}</a></h3>
+        </div>
+        <div class="single-blog-text">
+            <p>{{ post.summary }}</p>
+            <div class="single-blog-read-more">
+                <a href="/blog/post/{{post.slug}}">{{"дальше"|_}} <i class="fa fa-long-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+    <!--End Single blog item-->
+    {%endfor%}
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="practice-v3-paginat">
+                <ul class="pagination">
+                    {% for page in 1..posts.lastPage %}
+                    <li class="{{ posts.currentPage == page ? 'active' : null }}">
+                        <a href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
+                    </li>
+                    {% endfor %}
+
+                    {% if posts.lastPage > posts.currentPage %}
+                    <li> <a href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage+1) }) }}"><i class="fa fa-long-arrow-right"></i></a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
