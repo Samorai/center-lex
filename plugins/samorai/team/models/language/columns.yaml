@@ -2,8 +2,8 @@ columns:
     language:
         label: Язык
         type: text
-    team:
+    team_members:
         label: 'Член команды'
         type: text
         select: name
-        relation: team
+        relation: team_members

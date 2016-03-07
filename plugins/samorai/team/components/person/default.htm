@@ -13,18 +13,23 @@
                 <h3>{{member.name}}</h3>
                 <h5>{{member.position}}</h5>
             </div>
+            {%if member.phone or member.email %}
             <div class="single-attorney-info">
                 <ul>
-                    <li class="single-attorney-phn">{%if member.phone%}{{member.phone}}{%endif%}</li>
-                    <li class="single-attorney-envelop">{%if member.email%}{{member.email}}{%endif%}</li>
+                    {%if member.phone%}<li class="single-attorney-phn">{{member.phone}}</li>{%endif%}
+                    {%if member.email%}<li class="single-attorney-envelop">{{member.email}}</li>{%endif%}
                 </ul>
             </div>
+            {%endif%}
+            {% if member.facebook or member.twitter or member.google or member.linkedin %}
             <div class="single-attorney-socila-link">
                 {% if member.facebook %}<a href="{{member.facebook}}" target="_blank"><i class="fa fa-facebook mysocial_style"></i></a>{%endif%}
                 {% if member.twitter %}<a href="{{member.twitter}}" target="_blank"><i class="fa fa-twitter mysocial_style"></i></a>{%endif%}
                 {% if member.google %}<a href="{{member.google}}" target="_blank"><i class="fa fa-google-plus mysocial_style"></i></a>{%endif%}
                 {% if member.linkedin %}<a href="{{member.linkedin}}" target="_blank"><i class="fa fa-linkedin mysocial_style"></i></a>{%endif%}
             </div>
+            {%endif%}
+            {% if member.practices.count() > 0 %}
             <div class="single-attorney-title">
                 <h3><span>{{"Practice Areas"|_}}:</span></h3>
             </div>
@@ -34,11 +39,12 @@
                     <li><a href="/practice/{{practice.alias}}">{{practice.name}}</a></li>
                 {%endfor%}
             </div>
+            {%endif%}
         </div>
     </div>
 </div>
 
-
+{%if member.experiences%}
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
     <div class="single-attorney-bottom">
         <div class="section-title">
@@ -49,3 +55,4 @@
         </div>
     </div>
 </div>
+{%endif%}

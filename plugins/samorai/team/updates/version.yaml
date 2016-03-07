@@ -21,3 +21,6 @@
 1.0.8:
     - 'Updated table samorai_team_education'
     - builder_table_update_samorai_team_education_2.php
+1.0.9:
+    - 'Updated table samorai_team_languages'
+    - builder_table_update_samorai_team_languages.php

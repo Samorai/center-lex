@@ -3,7 +3,7 @@ fields:
         label: Язык
         span: auto
         type: text
-    team:
+    team_members:
         label: 'Член команды'
         nameFrom: name
         descriptionFrom: description

@@ -27,7 +27,7 @@ class Language extends Model
     public $table = 'samorai_team_languages';
 
     public $belongsTo = [
-        'team' => 'Samorai\Team\Models\TeamMembers'
+        'team_members' => 'Samorai\Team\Models\TeamMembers'
     ];
 
     public $implement = ['RainLab.Translate.Behaviors.TranslatableModel'];
