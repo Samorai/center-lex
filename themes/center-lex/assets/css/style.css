@@ -2266,8 +2266,9 @@ width: 44px;
   padding-bottom: 20px;
 }
 .widget-lawyer-image {
-  width: 122px;
-  float: left;
+    height: 120px;
+    width: 122px;
+    float: left;
 }
 .widget-lawyer-name {
   border: 1px solid #e6e6e6;

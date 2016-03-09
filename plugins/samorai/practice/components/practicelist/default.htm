@@ -15,7 +15,9 @@
     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
         <div class="single-featured">
             <div class="single-featured-icon alignleft">
-                <i class="flaticon-justice4"></i>
+                {% if practice.image_on_main %}
+                    <img src="{{practice.image_on_main.path}}" style="width: 65px; height: 60px;"/>
+                {% endif %}
             </div>
             <div class="single-featured-text">
                 <h5><a href="/practice/{{practice.alias}}">{{practice.name}}</a></h5>

@@ -23,7 +23,12 @@ fields:
         span: full
         type: textarea
     image:
-        label: Image
+        label: Изображение в правом меню 122х120
+        mode: image
+        span: auto
+        type: fileupload
+    image_on_main:
+        label: Изображение на главной 60х65
         mode: image
         span: auto
         type: fileupload

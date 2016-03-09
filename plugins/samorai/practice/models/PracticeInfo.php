@@ -31,6 +31,7 @@ class PracticeInfo extends Model
     public $translatable = ['name', 'text', 'small_text'];
 
     public $attachOne = [
-        'image' => 'System\Models\File'
+        'image' => 'System\Models\File',
+        'image_on_main' => 'System\Models\File'
     ];
 }

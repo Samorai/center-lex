@@ -1,4 +1,12 @@
 [practice_list]
+
+[menu]
+start = "id-1"
+activeNode = 0
+listItemClasses = "item"
+primaryClasses = "nav nav-pills"
+secondaryClasses = "dropdown-menu"
+numberOfLevels = 2
 ==
 <!doctype html>
 <html class="no-js" lang="">
@@ -8,7 +16,7 @@
     <title>{{ this.page.title }}</title>
     <meta name="description" content="{{ this.page.meta_description }}">
     <meta name="title" content="{{ this.page.meta_title }}">
-    <link rel="icon" type="image/png" href="{{ 'assets/img/favicon.png'|theme }}" />
+    <link rel="icon" type="image/jpeg" href="{{ 'assets/img/center-lex-logo.jpeg'|theme }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="{{ [
             'assets/css/style.css',
@@ -26,34 +34,13 @@
     <div class="container">
         <div class="logo pull-left">
             <a href="/">
-                <img src="/themes/center-lex/assets/img/logo-2.png" alt="Logo image">
+                <!--<img src="/themes/center-lex/assets/img/logo-2.png" alt="Logo image">-->
+                <img src="/themes/center-lex/assets/img/center-lex-logo.jpeg" alt="" style="width: 61px;">
             </a>
         </div>
         <nav class="mainmenu pull-right">
             <div class="nav-holder">
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about">About us</a></li>
-                    <li class="dropdown">
-                        <a href="/team">Attorney</a>
-                        <ul class="submenu">
-                            <li><a href="/team/person">Attorney Profile</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="/practice/default">Practice Areas</a>
-                        <ul class="submenu">
-                            <li><a href="/practice/default">Practice Two</a></li>
-                            <li><a href="/practice/default">Practice Three</a></li>
-                            <li><a href="/practice/default">Practice Four</a></li>
-                            <li><a href="/practice/default">Practice Five</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="/blog">blog</a>
-                    </li>
-                    <li><a href="/contacts">contact us</a></li>
-                </ul>
+                {% component 'menu' %}
             </div>
             <div class="nav-expander">
                 <ul>
@@ -85,7 +72,8 @@
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                 <div class="single-footer-widget">
                     <div class="footer-logo">
-                        <img src="/themes/center-lex/assets/img/footer-logo.png" alt="">
+                        <!--<img src="/themes/center-lex/assets/img/footer-logo.png" alt="">-->
+                        <img src="/themes/center-lex/assets/img/center-lex-logo.jpeg" alt="" style="width: 61px;">
                     </div>
                     <div class="widget-text">
                         <p>{{"Footer_about_text"|_}}</p>

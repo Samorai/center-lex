@@ -5,6 +5,8 @@ use Cms\Classes\Page;
 use Cms\Classes\Theme;
 use Lang;
 use Model;
+use Samorai\Practice\Models\PracticeInfo;
+use Samorai\Team\Models\TeamMembers;
 use System\Classes\ApplicationException;
 use Validator;
 use Input;
@@ -264,5 +266,22 @@ class Menu extends Model
             $urlValue = $this->internal_url;
         }
         $this->attributes['url'] = $urlValue;
+    }
+
+    public function getTeam()
+    {
+        $team = TeamMembers::all();
+        $team->each(function($team_one) {
+            $team_one->url = "/team/".$team_one->slug;
+        });
+        return $team;
+    }
+    public function getPractices()
+    {
+        $practices = PracticeInfo::all();
+        $practices->each(function($practice) {
+            $practice->url = "/practice/".$practice->alias;
+        });
+        return $practices;
     }
 }

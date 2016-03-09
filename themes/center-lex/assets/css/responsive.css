@@ -11,6 +11,9 @@
 
 /* Medium screen  */ 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .widget-lawyer-image{
+        float: inherit;
+    }
 .lawyer-count h1 {
   padding-left: 0;
 }

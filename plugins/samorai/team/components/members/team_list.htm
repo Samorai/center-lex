@@ -3,10 +3,10 @@
 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
     <div class="single-attorney single-best-attorney">
         <div class="attorney-image-holder">
-            <img src="{{member.image.path}}" alt="">
+            <a href="/team/{{member.slug}}"><img src="{{member.image.path}}" alt=""></a>
         </div>
         <div class="attorney-name text-center">
-            <h5>{{member.name}}</h5>
+            <a href="/team/{{member.slug}}"><h5>{{member.name}}</h5></a>
             <p>{{member.position}}</p>
             <h4>{{"Practice Areas"|_}}:</h4>
             <p class="practice">
