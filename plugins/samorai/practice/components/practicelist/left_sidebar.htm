@@ -2,7 +2,7 @@
     <div class="practice-right-sidebar">
         <!--Start practice right single sidebar-->
         <div class="practice-right-single-sidebar">
-            <div class="practice-widget-items" style="padding-top: 10px; ">
+            <div class="practice-widget-items">
                 {%for practice in practices%}
                 <!--Start Practice widget single-item-->
                 <div class="fix practice-widget-single-item">
@@ -11,8 +11,8 @@
                         <img src="{{practice.image.path}}" alt="">
                     </div>
                     {%endif%}
-                    <div class="fix widget-lawyer-name"  style="height: 120px;margin: 0 auto;">
-                        <div style="margin: 0 auto;">
+                    <div class="fix widget-lawyer-name">
+                        <div>
                             <h4><a href="/practice/{{practice.alias}}">{{practice.name}}</a></h4>
                         </div>
                     </div>

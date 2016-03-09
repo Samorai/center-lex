@@ -2263,7 +2263,8 @@ width: 44px;
   margin-bottom: 23px;
 }
 .practice-widget-single-item {
-  padding-bottom: 15px;
+  padding-bottom: 10px;
+    padding-top: 5px;
 }
 .widget-lawyer-image {
     /*height: 110px;*/

@@ -2,7 +2,7 @@
     {% for post in posts %}
     <!--Start Single blog item-->
     <div class="single-blog-item">
-        <div style="height: 250px;"><img src="{{post.main_image.path}}" alt="" style="height: 100%;"></div>
+        <div ><img src="{{post.main_image.path}}" alt=""></div>
         <div class="fix blog-post-date">
             <h1><b>{{ post.published_at|date('d') }}</b> <br> {{ post.published_at|date('M') }}</h1>
         </div>
