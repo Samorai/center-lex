@@ -9,7 +9,7 @@ crumb_disabled = 0
 
 [practice_list]
 
-[blogPosts]
+[blogPosts blogposts]
 pageNumber = "{{ :page }}"
 postsPerPage = 10
 noPostsMessage = "No posts found"
@@ -40,7 +40,7 @@ postPage = "blog.detail"
     <div class="container">
         <div class="row">
             <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
-                {% component 'blogPosts' %}
+                {% component 'blogposts' %}
                 
             </div>
             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
