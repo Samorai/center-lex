@@ -84,11 +84,11 @@ class ContactForm extends ComponentBase{
 
         // Validate
         if ($validator->fails()) {
-            throw new ValidationException($validator);
+            return ['error' => true];
         }
 
         // If everything is fine - send an email
-        Mail::send('laminsanneh.flexicontact::emails.message', post(), function($message)
+        $answer = Mail::send('laminsanneh.flexicontact::emails.message', post(), function($message)
         {
             $message->from(post('email'), post('name'))
                 ->to(Settings::get('recipient_email'), Settings::get('recipient_name'))
@@ -96,10 +96,14 @@ class ContactForm extends ComponentBase{
         });
 
         $this->page["confirmation_text"] = Settings::get('confirmation_text');
-        return ['error' => false];
+        return ['error' => false, 'data' => $answer];
     }
 
     public function onRun(){
+
+        if (!empty(post())) {
+            $this->onMailSent();
+        }
 
         if($this->property('injectBootstrapAssets') == true){
             $this->addCss('assets/css/bootstrap.css');

@@ -185,6 +185,9 @@ jQuery(document).on('ready', function(){
 		revolutionSliderActiver();
 		mobileNavToggler();
 		$('#nav').slicknav();
+        $('#contact_form_submit').click(function(){
+            //$(this).request('onMailSent');
+        });
 		$(".owl-carousel").owlCarousel({
 			autoPlay: 3000, //Set AutoPlay to 3 seconds
 			loop: true,
@@ -216,8 +219,6 @@ jQuery(document).on('ready', function(){
 		  });
 
 	})(jQuery);
-	
-
 
 
 

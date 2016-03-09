@@ -8,7 +8,7 @@
                 </div>
                 {% for member in members %}
                 <!--Start Single Attorney-->
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                     <div class="single-attorney">
                         <div class="attorney-image-holder">
                             <img src="{{member.image.path}}" alt="">
@@ -28,7 +28,7 @@
                             </div>
                         </div>
                         <div class="attorney-name text-center">
-                            <h5><a href="/team/{{member.slug}}">{{member.name}}</a></h5>
+                            <h5><a href="{%if activeLocale != 'ua'%}/{{activeLocale}}{%endif%}/team/{{member.slug}}">{{member.name}}</a></h5>
                             <p>{{member.position}}</p>
                         </div>
                     </div>

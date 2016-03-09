@@ -20,7 +20,7 @@
                 {% endif %}
             </div>
             <div class="single-featured-text">
-                <h5><a href="/practice/{{practice.alias}}">{{practice.name}}</a></h5>
+                <h5><a href="{%if activeLocale != 'ua'%}/{{activeLocale}}{%endif%}/practice/{{practice.alias}}">{{practice.name}}</a></h5>
                 <p>{{practice.small_text}}</p>
             </div>
         </div>

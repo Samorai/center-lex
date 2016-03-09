@@ -9,7 +9,7 @@
     <ul class="{% if key == 0%}left-quick-links alignleft{%endif%}">
     {% set opened = 1 %}
     {% set current = key %}
-{%endif%}<li><i class="fa fa-angle-right"></i><a href="/practice/{{practice.alias}}">{{practice.name}}</a></li>
+{%endif%}<li><i class="fa fa-angle-right"></i><a href="{%if activeLocale != 'ua'%}/{{activeLocale}}{%endif%}/practice/{{practice.alias}}">{{practice.name}}</a></li>
 
 {%if loop.last and opened == 1%}</ul>{%endif%}
 {% endfor %}

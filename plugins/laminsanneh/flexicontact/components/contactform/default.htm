@@ -2,22 +2,22 @@
     <!--This will contain the confirmation when the email is successfully sent-->
 </div>
 <form class="flexiContactForm" role="form" method="post"
-      data-request="{{ __SELF__ }}::onMailSent"
-      data-request-update="'{{ __SELF__ }}::confirm': '.confirm-container'">
+      data-request="onMailSent"
+      data-request-update="'confirm': '.confirm-container'">
 
     <div class="form-groups">
         <div class="form-group">
-            <input type="text" class="form-control" value=""  name="name" placeholder="Enter name">
+            <input type="text" class="form-control" value=""  name="name" placeholder='{{"Enter name"|_}}'>
         </div>
         <div class="form-group">
-            <input type="text" class="form-control" value="" name="email" placeholder="Enter Email">
+            <input type="text" class="form-control" value="" name="email" placeholder='{{"Enter Email"|_}}'>
         </div>
         <div class="form-group">
-            <input type="text" class="form-control" value="" name="subject" placeholder="Enter Subject">
+            <input type="text" class="form-control" value="" name="subject" placeholder='{{"Enter Subject"|_}}'>
         </div>
         <div class="form-group">
-            <textarea class="form-control" value="" name="body" placeholder="Enter Message" cols="30" rows="10"></textarea>
+            <textarea class="form-control" value="" name="body" placeholder='{{"Enter Message"|_}}' cols="30" rows="10"></textarea>
         </div>
-        <button type="submit">Submit Now <i class="fa fa-arrow-right"></i></button>
+        <button type="submit" id="contact_form_submit">{{"Submit Now"|_}} <i class="fa fa-arrow-right"></i></button>
     </div>
 </form>

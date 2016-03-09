@@ -2073,6 +2073,7 @@ width: 44px;
 .practice-left-top-left-img {
   float: left;
   margin-right: 30px;
+    padding-top: 5px;
 }
 .practice-left-middle-text h2 {
   color: #000000;
@@ -2977,6 +2978,18 @@ width: 44px;
   border: 1px solid #1f1f1f;
   border-radius: 5px;
   line-height: 42px;
+}.contact-form form button[type="button"] {
+  background: #1F1F1F none repeat scroll 0 0;
+  color: #ffffff;
+  display: inline-block;
+  font-family: "Open Sans",sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 0px 17px 0px 23px;
+  text-transform: uppercase;
+  border: 1px solid #1f1f1f;
+  border-radius: 5px;
+  line-height: 42px;
 }
 .contact-form form button[type="submit"] .fa {
   color: #B89B5E;
@@ -3460,7 +3473,7 @@ header.stricky-fixed .logo {
   line-height: 70px;
 }
 header.stricky-fixed .logo img {
-  width: 80%;
+  width: 37%;
   transition: all .3s ease;
 }
 header .logo img {
@@ -3478,7 +3491,7 @@ header.stricky-fixed .mainmenu .nav-holder > ul > li.dropdown > a:after {
  /*color: #242424; */
 }
 header.stricky-fixed .mainmenu .nav-expander ul li button {
-  line-height: 70px;
+  /*line-height: 70px;*/
   /*color: #242424;*/
 }
 
@@ -3587,7 +3600,7 @@ header .search-box button {
   top: 200%;
   padding: 0;
   left: 0;
-  width: 240px;
+  width: 320px;
   background: #191919;
   z-index: 99999;
   visibility: hidden;
@@ -4028,3 +4041,20 @@ header .search-box button {
 #our-attorneys-area.home .attorney-name p {
   color: #fff;
 }
+
+
+.lang { position: relative; float: right; z-index: 4; }
+.lang .lang__selected { display: none; cursor: pointer; }
+.lang .lang__selected span { display: inline-block; vertical-align: middle; margin-right: 10px; font-size: 16px; text-transform: uppercase; color: #9d9d9d; font-family: "OpenSans-Semibold"; font-weight: normal; font-style: normal; }
+.lang .lang__selected img { display: inline-block; vertical-align: middle; width: 30px; height: 30px; -webkit-border-radius: 50%; border-radius: 50%; border: 1px solid #dbdbdb; }
+.lang ul { display: block; font-size: 0; margin-left: 34px; margin-top: 28px; }
+.lang li { display: inline-block; vertical-align: middle; margin-left: 15px; }
+.lang li:first-child { margin-left: 0; }
+.lang li button { position: relative; display: block; background: none; opacity: 0.5; cursor: pointer; -webkit-transition: opacity 200ms; transition: opacity 200ms; will-change: opacity; border: none;}
+.lang li button span { display: none; vertical-align: middle; margin-right: 10px; font-size: 16px; text-transform: uppercase; color: #9d9d9d; font-family: "OpenSans-Semibold"; font-weight: normal; font-style: normal; }
+.lang li button img { display: inline-block; vertical-align: middle; width: 36px; height: 36px; -webkit-border-radius: 50%; border-radius: 50%; border: 1px solid #dbdbdb; }
+.lang li button.active, .lang li button:hover { opacity: 1; }
+.lang { position: relative; float: right; z-index: 4; }
+.lang .lang__selected { display: none; cursor: pointer; }
+.lang .lang__selected span { display: inline-block; vertical-align: middle; margin-right: 10px; font-size: 16px; text-transform: uppercase; color: #9d9d9d; font-family: "OpenSans-Semibold"; font-weight: normal; font-style: normal; }
+.lang .lang__selected img { display: inline-block; vertical-align: middle; width: 30px; height: 30px; -webkit-border-radius: 50%; border-radius: 50%; border: 1px solid #dbdbdb; }

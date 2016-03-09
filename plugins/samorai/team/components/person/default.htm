@@ -36,7 +36,7 @@
             <div class="single-attorney-law-list">
                 <ul class="left-law-list">
                 {% for practice in member.practices %}
-                    <li><a href="/practice/{{practice.alias}}">{{practice.name}}</a></li>
+                    <li><a href="{%if activeLocale != 'ua'%}/{{activeLocale}}{%endif%}/practice/{{practice.alias}}">{{practice.name}}</a></li>
                 {%endfor%}
             </div>
             {%endif%}

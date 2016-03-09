@@ -3,15 +3,15 @@
 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
     <div class="single-attorney single-best-attorney">
         <div class="attorney-image-holder">
-            <a href="/team/{{member.slug}}"><img src="{{member.image.path}}" alt=""></a>
+            <a href="{%if activeLocale != 'ua'%}/{{activeLocale}}{%endif%}/team/{{member.slug}}"><img src="{{member.image.path}}" alt=""></a>
         </div>
         <div class="attorney-name text-center">
-            <a href="/team/{{member.slug}}"><h5>{{member.name}}</h5></a>
+            <a href="{%if activeLocale != 'ua'%}/{{activeLocale}}{%endif%}/team/{{member.slug}}"><h5>{{member.name}}</h5></a>
             <p>{{member.position}}</p>
             <h4>{{"Practice Areas"|_}}:</h4>
             <p class="practice">
                 {%for practice in member.practices%}
-                    {{practice.name}}<br/>
+                    <a href="{%if activeLocale != 'ua'%}/{{activeLocale}}{%endif%}/practice/{{practice.alias}}" style="color: #878787;">{{practice.name}}</a><br/>
                 {%endfor%}
             </p>
             <div class="phone-and-mail-number">

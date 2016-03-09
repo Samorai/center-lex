@@ -1,49 +1,3 @@
-<!--{% if parentNode and parentNode.getChildCount %}-->
-<!--<ul class="{{ primaryClasses }}">-->
-    <!--{% for primaryNav in parentNode.getChildren %}-->
-        <!--{% if primaryNav.enabled %}-->
-            <!--{% if primaryNav.getChildCount and numberOfLevels > 1 %}-->
-                <!--<li class="dropdown {{ listItemClasses }} {{ primaryNav.getListItemClasses(activeLeft, activeRight) }}">-->
-                    <!--<a href="{{ primaryNav.getLinkHref }}" target="{{ primaryNav.getLinkTarget }}" class="dropdown-toggle" data-toggle="dropdown">-->
-                        <!--{{ primaryNav.title }} <span class="caret"></span>-->
-                    <!--</a>-->
-            <!--{% else %}-->
-                <!--<li class="{{ listItemClasses }} {{ primaryNav.getListItemClasses(activeLeft, activeRight) }}">-->
-                    <!--<a href="{{ primaryNav.getLinkHref }}" target="{{ primaryNav.getLinkTarget }}">-->
-                        <!--{{ primaryNav.title }}-->
-                    <!--</a>-->
-            <!--{% endif %}-->
-            <!--{% if primaryNav.getChildCount and numberOfLevels > 1 %}-->
-                <!--<ul class="{{ secondaryClasses }}">-->
-                    <!--{% for secondaryNav in primaryNav.getChildren %}-->
-                        <!--{% if secondaryNav.enabled %}-->
-                            <!--<li class="{{ listItemClasses }} {{ secondaryNav.getListItemClasses(activeLeft, activeRight) }}">-->
-                                <!--<a href="{{ secondaryNav.getLinkHref }}" target="{{ secondaryNav.getLinkTarget }}">-->
-                                    <!--{{ secondaryNav.title }}-->
-                                <!--</a>-->
-                                <!--{% if secondaryNav.getChildCount and numberOfLevels > 2 %}-->
-                                    <!--<ul class="{{ tertiaryClasses }}">-->
-                                        <!--{% for tertiaryNav in secondaryNav.getChildren %}-->
-                                            <!--{% if tertiaryNav.enabled %}-->
-                                                <!--<li class="{{ listItemClasses }} {{ tertiaryNav.getListItemClasses(activeLeft, activeRight) }}">-->
-                                                    <!--<a href="{{ tertiaryNav.getLinkHref }}" target="{{ tertiaryNav.getLinkTarget }}">-->
-                                                        <!--{{ tertiaryNav.title }}-->
-                                                    <!--</a>-->
-                                                <!--</li>-->
-                                            <!--{% endif %}-->
-                                        <!--{% endfor %}-->
-                                    <!--</ul>-->
-                                <!--{% endif %}-->
-                            <!--</li>-->
-                        <!--{% endif %}-->
-                    <!--{% endfor %}-->
-                <!--</ul>-->
-            <!--{% endif %}-->
-                <!--</li>-->
-        <!--{% endif %}-->
-    <!--{% endfor %}-->
-<!--</ul>-->
-<!--{% endif %}-->
 {% if parentNode and parentNode.getChildCount %}
 <ul>
     {% for primaryNav in parentNode.getChildren %}
@@ -58,11 +12,11 @@
                 <ul class="submenu">
                     {% if primaryNav.url == 'team' %}
                         {% for secondaryNav in primaryNav.getTeam %}
-                            <li><a href="{{ secondaryNav.url }}">{{ secondaryNav.name }}</a></li>
+                            <li><a href="{%if activeLocale != 'ua'%}/{{activeLocale}}{%endif%}{{ secondaryNav.url }}">{{ secondaryNav.name }}</a></li>
                         {%endfor%}
                     {%else%}
                         {% for secondaryNav in primaryNav.getPractices %}
-                            <li><a href="{{ secondaryNav.url }}">{{ secondaryNav.name }}</a></li>
+                            <li><a href="{%if activeLocale != 'ua'%}/{{activeLocale}}{%endif%}{{ secondaryNav.url }}">{{ secondaryNav.name }}</a></li>
                         {%endfor%}
                     {%endif%}
                     {% for secondaryNav in primaryNav.getChildren %}
@@ -72,25 +26,5 @@
             {%endif%}
         </li>
     {% endfor %}
-    <!--<li><a href="/about">About us</a></li>-->
-    <!--<li class="dropdown">-->
-        <!--<a href="/team">Attorney</a>-->
-        <!--<ul class="submenu">-->
-            <!--<li><a href="/team/person">Attorney Profile</a></li>-->
-        <!--</ul>-->
-    <!--</li>-->
-    <!--<li class="dropdown">-->
-        <!--<a href="/practice/default">Practice Areas</a>-->
-        <!--<ul class="submenu">-->
-            <!--<li><a href="/practice/default">Practice Two</a></li>-->
-            <!--<li><a href="/practice/default">Practice Three</a></li>-->
-            <!--<li><a href="/practice/default">Practice Four</a></li>-->
-            <!--<li><a href="/practice/default">Practice Five</a></li>-->
-        <!--</ul>-->
-    <!--</li>-->
-    <!--<li class="dropdown">-->
-        <!--<a href="/blog">blog</a>-->
-    <!--</li>-->
-    <!--<li><a href="/contacts">contact us</a></li>-->
 </ul>
 {% endif %}

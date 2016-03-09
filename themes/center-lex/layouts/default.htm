@@ -7,6 +7,26 @@ listItemClasses = "item"
 primaryClasses = "nav nav-pills"
 secondaryClasses = "dropdown-menu"
 numberOfLevels = 2
+
+[localePicker]
+==
+<?php
+function onSwitchLocales(){
+    $locale = post('locale');
+    $site_name = url();
+    $full_url = URL::full();
+    $uri = str_replace($site_name, '', $full_url);
+    $lang = substr($uri, 1, 2);
+    $enabled_lang = array_keys(RainLab\Translate\Models\Locale::listEnabled());
+    $default = RainLab\Translate\Models\Locale::getDefault()->code;
+    $url_without_lang = in_array($lang, $enabled_lang) ? substr($uri, 3) : $uri;
+    if ($locale != $default) {
+        $url_without_lang = $locale . $url_without_lang;
+    }
+    RainLab\Translate\Classes\Translator::instance()->setLocale($locale);
+    return redirect($url_without_lang);
+}
+?>
 ==
 <!doctype html>
 <html class="no-js" lang="">
@@ -23,6 +43,21 @@ numberOfLevels = 2
             'assets/css/responsive.css'
         ]|theme }}" rel="stylesheet">
     <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+    <script src="{{ [
+            'assets/js/vendor/jquery-1.11.3.min.js',
+            '/assets/js/bootstrap.min.js',
+            'assets/js/jquery.themepunch.tools.min.js',
+            'assets/js/jquery.themepunch.revolution.min.js',
+            'assets/js/vendor/modernizr-2.8.3.min.js',
+            'assets/js/owl.carousel.min.js',
+            'assets/js/jquery.appear.js',
+            'assets/js/jquery.countTo.js',
+            'assets/js/plugins.js',
+            'assets/js/main.js'
+        ]|theme }}"></script>
+    {% framework %}
+    {% scripts %}
 </head>
 <body>
 <!--[if lt IE 8]>
@@ -45,6 +80,7 @@ numberOfLevels = 2
             <div class="nav-expander">
                 <ul>
                     <li><button class="nav-collapser"><i class="fa fa-bars"></i></button></li>
+                    <li>{% component 'localePicker' %}</li>
                     <!--<li><button class="header-search-toggler"><i class="icon icon-Search"></i></button></li>-->
                 </ul>
             </div>
@@ -126,19 +162,5 @@ numberOfLevels = 2
     </div>
 </section>
 <!--End Footer area-->
-
-
-<script src="{{ [
-            'assets/js/vendor/jquery-1.11.3.min.js',
-            '/assets/js/bootstrap.min.js',
-            'assets/js/jquery.themepunch.tools.min.js',
-            'assets/js/jquery.themepunch.revolution.min.js',
-            'assets/js/vendor/modernizr-2.8.3.min.js',
-            'assets/js/owl.carousel.min.js',
-            'assets/js/jquery.appear.js',
-            'assets/js/jquery.countTo.js',
-            'assets/js/plugins.js',
-            'assets/js/main.js'
-        ]|theme }}"></script>
 </body>
 </html>

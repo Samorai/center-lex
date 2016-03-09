@@ -1,0 +1,18 @@
+==
+<div class="lang">
+    {% set flags = {ua:'/themes/center-lex/assets/img/ukraine.png', ru:'/themes/center-lex/assets/img/Flag_of_Russia.png'} %}
+
+    {% for code, name in locales %}
+        {% if code == activeLocale %}
+            <div class="lang__selected js-lang-status"><span>{{code}}</span><img src="{{attribute(flags, code)}}" alt=""></div>
+        {% endif %}
+    {% endfor %}
+
+    <ul class="js-lang-list">
+        {% for code, name in locales %}
+        <li class="lang__item" data-request-data="locale:'{{code}}'">
+            <button type="button" onclick="$(this).request('onSwitchLocales'); return false;" class="lang__btn js-lang-btn {{ code == activeLocale ? 'active' }}"><span>{{code}}</span><img src="{{attribute(flags, code)}}" alt=""></button>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
