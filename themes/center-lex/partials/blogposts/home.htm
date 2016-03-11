@@ -5,7 +5,7 @@
         <div class="news-image-holder">
             <img src="{{post.main_image.path}}" alt="">
             <div class="overlay">
-                <a href="{%if activeLocale != 'ua'%}/{{activeLocale}}{%endif%}/blog/post/{{post.slug}}"><i class="fa fa-link"></i></a>
+                <a href="/blog/post/{{post.slug}}"><i class="fa fa-link"></i></a>
             </div>
             <div class="published-date-wrapper">
                 <div class="published-date">
@@ -15,7 +15,7 @@
             </div>
         </div>
         <div class="latest-news-text">
-            <h4><a href="{%if activeLocale != 'ua'%}/{{activeLocale}}{%endif%}/blog/post/{{post.slug}}">{{ post.title }}</a></h4>
+            <h4><a href="/blog/post/{{post.slug}}">{{ post.title }}</a></h4>
             <p>{{ post.summary }}</p>
         </div>
     </div>

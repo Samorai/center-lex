@@ -3473,7 +3473,7 @@ header.stricky-fixed .logo {
   line-height: 70px;
 }
 header.stricky-fixed .logo img {
-  width: 37%;
+  /*width: 37%;*/
   transition: all .3s ease;
 }
 header .logo img {
