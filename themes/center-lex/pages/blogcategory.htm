@@ -1,5 +1,5 @@
-title = "Blog"
-url = "/blog/post/:slug"
+title = "Blog.category"
+url = "/blog/category/:slug/:page?"
 layout = "default"
 is_hidden = 0
 child_of = "mey_no_parent"
@@ -7,18 +7,22 @@ hide_crumb = 0
 remove_crumb_trail = 0
 crumb_disabled = 0
 
-[blogPost]
-slug = "{{ :slug }}"
-categoryPage = "about"
-
 [practice_list]
+
+[blogPosts blogposts]
+pageNumber = "{{ :page }}"
+categoryFilter = "{{ :slug }}"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "about"
+postPage = "blog.detail"
 
 [blogCategories blogcategories]
 slug = "{{ :slug }}"
 displayEmpty = 0
-categoryPage = "blogcategory"
+categoryPage = "blog"
 ==
-<!--Start Breadcrumb Text area-->
 <section class="breadcrumb-area">
     <div class="breadcrumb-text-area">
         <div class="container">
@@ -28,7 +32,7 @@ categoryPage = "blogcategory"
                         <h1>Блог</h1>
                         <ul class="breadcrumbs">
                             <li><a href="/">Головна</a><i class="fa fa-angle-right"></i></li>
-                            <li><a href="#">Блог</a></li>
+                            <li><a href="/blog">Блог</a></li>
                         </ul>
                     </div>
                 </div>
@@ -37,21 +41,13 @@ categoryPage = "blogcategory"
     </div>
 </section>
 
-<!--End Breadcrumb Text area-->
-
-<!--Start blog details area-->
-<section id="blog-details-area">
+<!--Start blog v1 area-->
+<section id="blog-v1-area">
     <div class="container">
         <div class="row">
             <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
-                <div class="blog-items blog-details-part">
-                    <!--Start blog details-->
+                {% component 'blogposts' %}
 
-                    <div class="blog-details">
-                        {% component 'blogPost' %}
-                    </div>
-                    <!--End blog details-->
-                </div>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                 <!--Start Left sidebar widget-->
@@ -66,4 +62,4 @@ categoryPage = "blogcategory"
         </div>
     </div>
 </section>
-<!--End blog details area-->
+<!--End blog v1 area-->

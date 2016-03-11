@@ -1,0 +1,12 @@
+<div class="left-sidebar-single-item">
+    <div class="sidebar-widget-title">
+        <h3><span>{{"Categories"|_}}</span></h3>
+    </div>
+    <div class="sidebar-widget-category">
+        <ul>
+            {% for category in categories %}
+                <li><a href="{{category.url}}">{{category.name}}</a></li>
+            {%endfor%}
+        </ul>
+    </div>
+</div>

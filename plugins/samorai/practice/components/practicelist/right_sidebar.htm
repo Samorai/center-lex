@@ -1,10 +1,9 @@
 <div class="left-sidebar-single-item">
-<div class="sidebar-widget-title">
-    <h3><span>{{"Practice Widget"|_}}</span></h3>
-</div>
-<div class="practice-widget-items">
-            {%for practice in practices%}
-            <!--Start Practice widget single-item-->
+    <div class="sidebar-widget-title">
+        <h3><span>{{"Practice Widget"|_}}</span></h3>
+    </div>
+    <div class="practice-widget-items">
+        {%for practice in practices%}
             <div class="fix practice-widget-single-item">
                 <div class="fix widget-lawyer-image">
                     <img src="{{practice.image.path}}" alt="">
@@ -13,6 +12,6 @@
                     <h4><a href="{%if activeLocale != 'ua'%}/{{activeLocale}}{%endif%}/practice/{{practice.alias}}">{{practice.name}}</a></h4>
                 </div>
             </div>
-            {%endfor%}
-        </div>
+        {%endfor%}
     </div>
+</div>

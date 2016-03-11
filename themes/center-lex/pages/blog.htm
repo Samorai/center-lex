@@ -11,11 +11,17 @@ crumb_disabled = 0
 
 [blogPosts blogposts]
 pageNumber = "{{ :page }}"
+categoryFilter = "{{ :slug }}"
 postsPerPage = 10
 noPostsMessage = "No posts found"
 sortOrder = "published_at desc"
 categoryPage = "about"
 postPage = "blog.detail"
+
+[blogCategories blogcategories]
+slug = "{{ :slug }}"
+displayEmpty = 0
+categoryPage = "blogcategory"
 ==
 <section class="breadcrumb-area">
     <div class="breadcrumb-text-area">
@@ -48,6 +54,7 @@ postPage = "blog.detail"
                 <div class="left-sidebar">
                     <div class="left-sidebar-items">
                         {%component "practice_list::right_sidebar.htm"%}
+                        {%component "blogcategories::right_sidebar.htm"%}
                     </div>
                 </div>
                 <!--End Left sidebar widget-->
