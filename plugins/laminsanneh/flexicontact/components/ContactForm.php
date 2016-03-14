@@ -12,6 +12,7 @@ namespace LaminSanneh\FlexiContact\components;
 use Cms\Classes\ComponentBase;
 use LaminSanneh\FlexiContact\Models\Settings;
 use Mail;
+use Mailgun\Mailgun;
 use Validator;
 use ValidationException;
 
@@ -86,17 +87,35 @@ class ContactForm extends ComponentBase{
         if ($validator->fails()) {
             return ['error' => true];
         }
+        $message = "Email: " . post('email') . "\nName: " . post('name') . "\nBody: " . post('body') ;
 
-        // If everything is fine - send an email
-        $answer = Mail::send('laminsanneh.flexicontact::emails.message', post(), function($message)
-        {
-            $message->from(post('email'), post('name'))
-                ->to(Settings::get('recipient_email'), Settings::get('recipient_name'))
-                ->subject(Settings::get('subject'));
-        });
+        ini_set('SMTP', 'smtp.gmail.com');
+        ini_set('smtp_port', 465);
+
+        //echo ;exit;
+
+        $mgClient = new Mailgun('key-c486a80b21951933a7858e3737e38ced');
+        $domain = "center-lex.com.ua";
+        $answer = $mgClient->sendMessage($domain, array(
+            'from'    => 'Center-lex <info@center-lex.com.ua>',
+            'to'      => Settings::get('recipient_name') ." <".Settings::get('recipient_email').">",
+            'subject' =>    Settings::get('subject'),
+            'text'    => $message
+        ));
+
+//        // If everything is fine - send an email
+//        $answer = Mail::send('laminsanneh.flexicontact::emails.message', post(), function($message)
+//        {
+//
+//            $message->from(post('email'), post('name'))
+//                ->to(Settings::get('recipient_email'), Settings::get('recipient_name'))
+//                ->subject(Settings::get('subject'));
+//        });
 
         $this->page["confirmation_text"] = Settings::get('confirmation_text');
         return ['error' => false, 'data' => $answer];
+
+
     }
 
     public function onRun(){
