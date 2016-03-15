@@ -25,7 +25,7 @@ class ContactForm extends ComponentBase{
     public $formValidationRules = [
         'name' => ['required'],
         'email' => ['required', 'email'],
-        'subject' => ['required'],
+        'subject' => ['sometimes|required'],
         'body' => ['required'],
     ];
 
@@ -87,12 +87,7 @@ class ContactForm extends ComponentBase{
         if ($validator->fails()) {
             return ['error' => true];
         }
-        $message = "Email: " . post('email') . "\nName: " . post('name') . "\nBody: " . post('body') ;
-
-        ini_set('SMTP', 'smtp.gmail.com');
-        ini_set('smtp_port', 465);
-
-        //echo ;exit;
+        $message = "Email: " . post('email') . "\nName: " . post('name') . "\nSubject: " . post('subject') . "\nBody: " . post('body') ;
 
         $mgClient = new Mailgun('key-c486a80b21951933a7858e3737e38ced');
         $domain = "center-lex.com.ua";
@@ -103,14 +98,31 @@ class ContactForm extends ComponentBase{
             'text'    => $message
         ));
 
-//        // If everything is fine - send an email
-//        $answer = Mail::send('laminsanneh.flexicontact::emails.message', post(), function($message)
-//        {
-//
-//            $message->from(post('email'), post('name'))
-//                ->to(Settings::get('recipient_email'), Settings::get('recipient_name'))
-//                ->subject(Settings::get('subject'));
-//        });
+        $this->page["confirmation_text"] = Settings::get('confirmation_text');
+        return ['error' => false, 'data' => $answer];
+
+
+    }
+
+    public function onMailSentHome()
+    {
+        // Build the validator
+        $validator = Validator::make(post(), $this->formValidationRules, $this->customMessages);
+
+        // Validate
+        if ($validator->fails()) {
+            return ['error' => true];
+        }
+        $message = "Email: " . post('email') . "\nName: " . post('name') . "\nSurname: " . post('surname') . "\nPhone: " . post('phone') . "\nBody: " . post('body') ;
+
+        $mgClient = new Mailgun('key-c486a80b21951933a7858e3737e38ced');
+        $domain = "center-lex.com.ua";
+        $answer = $mgClient->sendMessage($domain, array(
+            'from'    => 'Center-lex <info@center-lex.com.ua>',
+            'to'      => Settings::get('recipient_name') ." <".Settings::get('recipient_email').">",
+            'subject' =>    Settings::get('subject'),
+            'text'    => $message
+        ));
 
         $this->page["confirmation_text"] = Settings::get('confirmation_text');
         return ['error' => false, 'data' => $answer];

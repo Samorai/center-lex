@@ -654,6 +654,18 @@ css:
   margin-bottom: 15px;
   padding: 0 20px;
   width: 100%;
+}.case-evaluation-form input[type="tel"] {
+  color: #aba9a9;
+  height: 42px;
+  margin-bottom: 15px;
+  padding: 0 20px;
+  width: 100%;
+}.case-evaluation-form input[type="email"] {
+  color: #aba9a9;
+  height: 42px;
+  margin-bottom: 15px;
+  padding: 0 20px;
+  width: 100%;
 }
 .case-evaluation-form textarea {
   height: 121px;
