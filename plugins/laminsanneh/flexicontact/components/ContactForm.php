@@ -25,7 +25,7 @@ class ContactForm extends ComponentBase{
     public $formValidationRules = [
         'name' => ['required'],
         'email' => ['required', 'email'],
-        'subject' => ['sometimes|required'],
+        'subject' => ['required'],
         'body' => ['required'],
     ];
 
@@ -107,12 +107,12 @@ class ContactForm extends ComponentBase{
     public function onMailSentHome()
     {
         // Build the validator
-        $validator = Validator::make(post(), $this->formValidationRules, $this->customMessages);
-
-        // Validate
-        if ($validator->fails()) {
-            return ['error' => true];
-        }
+//        $validator = Validator::make(post(), $this->formValidationRules, $this->customMessages);
+//
+//        // Validate
+//        if ($validator->fails()) {
+//            return ['error' => true];
+//        }
         $message = "Email: " . post('email') . "\nName: " . post('name') . "\nSurname: " . post('surname') . "\nPhone: " . post('phone') . "\nBody: " . post('body') ;
 
         $mgClient = new Mailgun('key-c486a80b21951933a7858e3737e38ced');
