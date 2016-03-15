@@ -200,7 +200,7 @@ jQuery(document).on('ready', function(){
 	            '<i class="fa fa-angle-right"></i>'
 	        ],
 		    autoplayHoverPause: true,
-		   items : 5,
+		    items : 5,
 		    responsive: {
 		        0:{
 		            items:1

@@ -17,7 +17,8 @@
 	content: "\e000";
 }
 .flaticon-justice4:before {
-	content: "\e001";
+    content:url('../img/arrow.png');
+	/*content: "\e001";*/
 }
 .flaticon-medical85:before {
 	content: "\e002";

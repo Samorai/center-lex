@@ -3832,7 +3832,7 @@ header .search-box button {
   left: 0;
   right: 0;
   bottom: 0;
-  opacity: .65;
+  opacity: .35;
   background: #000;
   z-index: 9;
 }
