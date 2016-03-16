@@ -12,11 +12,11 @@
                 <ul class="submenu">
                     {% if primaryNav.url == 'team' %}
                         {% for secondaryNav in primaryNav.getTeam %}
-                            <li><a href="{%if activeLocale != 'ua'%}/{{activeLocale}}{%endif%}{{ secondaryNav.url }}">{{ secondaryNav.name }}</a></li>
+                            <li><a href="{{ secondaryNav.url }}">{{ secondaryNav.name }}</a></li>
                         {%endfor%}
                     {%else%}
                         {% for secondaryNav in primaryNav.getPractices %}
-                            <li><a href="{%if activeLocale != 'ua'%}/{{activeLocale}}{%endif%}{{ secondaryNav.url }}">{{ secondaryNav.name }}</a></li>
+                            <li><a href="{{ secondaryNav.url }}">{{ secondaryNav.name }}</a></li>
                         {%endfor%}
                     {%endif%}
                     {% for secondaryNav in primaryNav.getChildren %}
