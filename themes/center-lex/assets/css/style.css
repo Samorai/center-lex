@@ -226,7 +226,7 @@ p {
   text-transform: uppercase;
 }
 .section-title h1::after {
-  background: #b89b5e none repeat scroll 0 0;
+  background: #deb887 none repeat scroll 0 0;
   content: " ";
   display: inline-block;
   height: 2px;
@@ -247,7 +247,7 @@ p {
   text-transform: uppercase;
 }
 .section-title h2::after {
-  background: #b89b5e none repeat scroll 0 0;
+  background: #deb887 none repeat scroll 0 0;
   content: " ";
   display: inline-block;
   height: 2px;
@@ -474,7 +474,7 @@ markup:
 css:
 
 .call-info {
-  background: #b89b5e none repeat scroll 0 0;
+  background: #deb887 none repeat scroll 0 0;
   display: block;
   overflow: hidden;
   padding: 15px;
@@ -541,7 +541,7 @@ css:
   text-transform: uppercase;
 }
 .civil-text a {
-  color: #b89b5e;
+  color: #deb887;
   font-size: 13px;
   text-transform: uppercase;
   font-weight: bold;
@@ -557,7 +557,7 @@ css:
   text-transform: uppercase; 
 }
 .our-law a {
-  color: #b89b5e;
+  color: #deb887;
   font-size: 13px;
   text-transform: uppercase;
   font-weight: bold;
@@ -606,7 +606,7 @@ css:
   content: '';
   height: 2px;
   width: 35px;
-  background: #DEBB7C;
+  background: #DEB887;
   display: block;
   margin: 15px 0;
 }
@@ -674,7 +674,7 @@ css:
   color:#8d8d8d;
 }
 .case-evaluation-form button[type="submit"] {
-  background: #b89b5e none repeat scroll 0 0;
+  background: #deb887 none repeat scroll 0 0;
   border: medium none;
   border-radius: 5px;
   color: #ffffff;
@@ -691,10 +691,10 @@ css:
   border: 1px solid #fff;
 }
 .case-evaluation-form input[type="text"]:focus{
-  border:1px solid #b89b5e;
+  border:1px solid #deb887;
 }
 .case-evaluation-form textarea:focus {
-  border:1px solid #b89b5e;
+  border:1px solid #deb887;
 }
 .case-evaluation-image img {
   float: left;
@@ -710,7 +710,7 @@ css:
   position: absolute;
   top: 0;
   left: 200%;
-  background: #B89B5E;
+  background: #deb887;
   display: block;
   opacity: .65;
   transition: all .3s ease;
@@ -791,7 +791,7 @@ css:
     color: white;
 }
 .single-attorney:hover .attorney-name {
-  background: #B89B5E;
+  background: #deb887;
 }
 .single-attorney:hover .attorney-name h5 {
   color: #fff;
@@ -844,7 +844,7 @@ css:
 }
 .lawyer-text p {
   font-family: "Open Sans",sans-serif;
-  color: #b89b5e;
+  color: #deb887;
   font-weight: 600;
   line-height: 20px;
   margin: 0;
@@ -914,7 +914,7 @@ css:
   margin-top: 8px;
 }
 .download-button a {
-  background: #b89b5e none repeat scroll 0 0;
+  background: #deb887 none repeat scroll 0 0;
   color: #ffffff;
   display: inline-block;
   font-family: "Raleway",sans-serif;
@@ -922,7 +922,7 @@ css:
   font-weight: 700;
   padding: 9px 30px;
   text-transform: uppercase;
-  border: 1px solid #b89b5e;
+  border: 1px solid #deb887;
 }
 .download-button a:hover {
   background: #363636;
@@ -975,7 +975,7 @@ css:
   font-family: "Open Sans",sans-serif;
 }
 .testimonial-author h4 {
-  color: #b89b5e;
+  color: #deb887;
   font-size: 16px;
   font-style: italic;
   font-family: "Open Sans",sans-serif;
@@ -986,7 +986,7 @@ css:
   position:absolute;
   left:-60px;
   top:120px;
-  color:#b89b5e;
+  color:#deb887;
   font-size:40px; 
 }
 /*End Testimonial Area Css*/
@@ -1011,7 +1011,9 @@ css:
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(184,155,94,.65);
+  /*background: rgba(184,155,94,.65);*/
+    background: #deb887;
+    opacity: 0.65;
   transform: scale(0.0);
 }
 .news-image-holder .overlay a {
@@ -1037,7 +1039,7 @@ css:
   width: 100%;
 }
 .published-date {
-  background: #b89b5e none repeat scroll 0 0;
+  background: #deb887 none repeat scroll 0 0;
   height: 63px;
   text-align: center;
   padding-top: 5px;
@@ -1079,7 +1081,7 @@ css:
   padding-right: 13px;
 }
 .news-info ul li a:hover {
-  color: #B89B5E;
+  color: #deb887;
 }
 .news-info ul li.admin-border-leftnone a{
   border-left:none;
@@ -1105,7 +1107,7 @@ css:
   font-family: 'PT Serif', sans-serif;
 }
 .latest-news-text .meta li a .fa {
-  color: #B89B5E;
+  color: #deb887;
 }
 .latest-news-text h4 {
   color: #282c3d;
@@ -1222,7 +1224,7 @@ css:
 }
 
 .get-free-consultation-button a:hover {
-  background: #B89B5E;
+  background: #deb887;
   color: #1f1f1f;
   border-color: #1F1F1F;
 }
@@ -1246,7 +1248,7 @@ css:
   font-family: "Open Sans",sans-serif;
 }
 .footer-read-more a {
-  color: #b89b5e;
+  color: #deb887;
   font-size: 13px;
   font-weight: 600;
   font-family: "Open Sans",sans-serif;
@@ -1266,8 +1268,8 @@ css:
   width: 30px;
 }
 .widget-social-links a i.mysocial_style:hover{
-  border:1px solid #b89b5e;
-  color:#b89b5e;  
+  border:1px solid #deb887;
+  color:#deb887;
 }
 
 .single-footer-widget h3 {
@@ -1404,7 +1406,7 @@ css:
 .single-featured-item .featured-icon i {
   border: 5px solid #fff;
   border-radius: 50%;
-  color: #C6A561;
+  color: #deb887;
   background: #1F1F1F;
   font-size: 42px;
   height: 115px;
@@ -1426,11 +1428,11 @@ css:
   font-family: "Open Sans",sans-serif;
 }
 .single-featured-item:hover .featured-icon i{
-  background: #C6A561;
+  background: #deb887;
   color: #fff;
 }
 .single-featured-item:hover .featured-text h4 {
-  color: #b89b5e; 
+  color: #deb887;
 }
 /*End Featured service area 2 css */
 
@@ -1592,7 +1594,7 @@ color: #fff;
 }
 
 .attorney-title-name {
-  background: #b89b5e none repeat scroll 0 0;
+  background: #deb887 none repeat scroll 0 0;
   margin: 25px 20px 0;
   padding-bottom: 4px;
   padding-top: 11px;
@@ -1687,7 +1689,7 @@ color: #fff;
   text-transform: uppercase;
 }
 .practice-v1-tabmenu ul.mytab li.active a{
-  color:#b89b5e;
+  color:#deb887;
 }
 /*End practice v1 tabmenu area css*/
 
@@ -1743,7 +1745,7 @@ color: #fff;
   padding-top: 22px;
 }
 .contact-us-box {
-  background: #b89b5e none repeat scroll 0 0;
+  background: #deb887 none repeat scroll 0 0;
   margin-right: 30px;
   margin-top: 40px;
   padding: 27px 0;
@@ -1801,7 +1803,7 @@ color: #fff;
   background:#3b3946; 
 }
 .choose-single-item:hover.choose-single-item h4{
-  color:#b89b5e;
+  color:#deb887;
 }
 .choose-single-item:hover.choose-single-item p{
   color:#b2b2b3;
@@ -1845,7 +1847,7 @@ color: #fff;
   text-transform: uppercase;
 }
 .practice-v2-single-item-title h4::after {
-  background: #b89b5e none repeat scroll 0 0;
+  background: #deb887 none repeat scroll 0 0;
   content: "";
   display: inline-block;
   height: 2px;
@@ -1859,7 +1861,7 @@ color: #fff;
   line-height:26px;
 }
 .practice-v2-single-item-text a {
-  background: #b89b5e none repeat scroll 0 0;
+  background: #deb887 none repeat scroll 0 0;
   color: #ffffff;
   display: inline-block;
   font-family: "Open Sans",sans-serif;
@@ -1943,7 +1945,7 @@ color: #fff;
   padding-left: 16px;
 }
 .practice-v3-paginat ul.pagination li.active a{
-  background: #b89b5e;
+  background: #deb887;
   color:#ffffff;
   border:none;  
 }
@@ -1974,7 +1976,7 @@ margin-bottom: 0;
 text-transform: uppercase;
 }
 .practice-v4-sidebar-title h3::after {
-background: #b89b5e none repeat scroll 0 0;
+background: #deb887 none repeat scroll 0 0;
 content: "";
 display: inline-block;
 height: 1px;
@@ -2021,7 +2023,7 @@ width: 44px;
   font-style:italic;
 }
 .right-content-contact-box a {
-  background: #b89b5e none repeat scroll 0 0;
+  background: #deb887 none repeat scroll 0 0;
   color: #1f1f1f;
   display: inline-block;
   font-family: "Raleway",sans-serif;
@@ -2075,11 +2077,11 @@ width: 44px;
 }
 .single-law-box:hover,
 .single-law-box.active {
-  border-left-color: #b89b5e;
+  border-left-color: #deb887;
 }
 .single-law-box:hover a,
 .single-law-box.active a {
-  color:#b89b5e;
+  color:#deb887;
 }
 
 .practice-left-top-left-img {
@@ -2133,7 +2135,7 @@ width: 44px;
   margin-bottom: 30px;
 }
 .blog-post-date {
-  background: #b89b5e none repeat scroll 0 0;
+  background: #deb887 none repeat scroll 0 0;
   float: left;
   height: 75px;
   margin-right: 30px;
@@ -2232,7 +2234,7 @@ width: 44px;
   margin-bottom: 22px;
 }
 .sidebar-widget-title h3::after {
-  background: #b89b5e none repeat scroll 0 0;
+  background: #deb887 none repeat scroll 0 0;
   content: "";
   display: inline-block;
   height: 1px;
@@ -2355,10 +2357,10 @@ width: 44px;
     border: medium none;
 }
 .sidebar-widget-category ul li a:hover {
-    color: #b89b5e;
+    color: #deb887;
 }
 .sidebar-widget-category ul li a:hover::before {
-    color: #b89b5e;
+    color: #deb887;
 }
 /*End category  widget items */
 
@@ -2400,7 +2402,7 @@ width: 44px;
 }
 .sidebar-tags-cloude ul li a:hover{
   background:#3b3946;
-  color:#b89b5e;
+  color:#deb887;
   border:1px solid #ffffff;
 }
 /*End Tag cloude  widget */
@@ -2652,7 +2654,7 @@ width: 44px;
 .john-michila-text p {
 }
 .john-michila-text h4 {
-  color: #b89b5e;
+  color: #deb887;
   float: right;
   font-family: "Open Sans",sans-serif;
   font-size: 16px;
@@ -2754,7 +2756,7 @@ width: 44px;
   line-height: 25px;
 }
 .comment-title h4::after {
-    background: #b89b5e none repeat scroll 0 0;
+    background: #deb887 none repeat scroll 0 0;
     content: "";
     display: inline-block;
     height: 1px;
@@ -2786,7 +2788,7 @@ width: 44px;
   text-transform: uppercase;
 }
 .comment-text h5 span {
-    color: #b89b5e;
+    color: #deb887;
     font-size: 13px;
     padding-left: 5px;
     text-transform: uppercase;
@@ -2799,7 +2801,7 @@ width: 44px;
   margin: 0;
 }
 .comment-text a {
-  color: #b89b5e;
+  color: #deb887;
   font-size: 12px;
   text-transform: uppercase;
   font-family: "Open Sans",sans-serif;
@@ -2855,7 +2857,7 @@ width: 44px;
 }
 .comment-form form button {
   background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-  border: 1px solid #b89b5e;
+  border: 1px solid #deb887;
   color: #b5985a;
   font-family: "PT Serif",sans-serif;
   font-size: 16px;
@@ -2884,7 +2886,7 @@ width: 44px;
   line-height: 42px;
 }
 .comment-form form button .fa {
-  color: #B89B5E;
+  color: #deb887;
   font-size: 14px;
   border-left: 1px solid #424242;
   padding-left: 15px;
@@ -2896,18 +2898,18 @@ width: 44px;
 }
 
 .comment-form form button:hover {
-  background: #B89B5E;
+  background: #deb887;
   color: #1f1f1f;
 }
 
 .comment-form form input.name:focus{
-  border:1px solid #b89b5e;
+  border:1px solid #deb887;
 }
 .comment-form form input.email:focus{
-  border:1px solid #b89b5e;
+  border:1px solid #deb887;
 }
 .comment-form form textarea.comment:focus{
-  border:1px solid #b89b5e;
+  border:1px solid #deb887;
 }
 /*End Meet Attorneys Comment form */
 /*End======================================================blog-details.html page css==============================*/
@@ -3014,7 +3016,7 @@ width: 44px;
   line-height: 42px;
 }
 .contact-form form button[type="submit"] .fa {
-  color: #B89B5E;
+  color: #deb887;
   font-size: 14px;
   border-left: 1px solid #424242;
   padding-left: 15px;
@@ -3026,7 +3028,7 @@ width: 44px;
 }
 
 .contact-form form button[type="submit"]:hover {
-  background: #B89B5E;
+  background: #deb887;
   color: #1f1f1f;
 }
 
@@ -3219,7 +3221,7 @@ width: 44px;
   text-transform: uppercase;
 }
 .single-attorney-title h3::after {
-  background: #b89b5e none repeat scroll 0 0;
+  background: #deb887 none repeat scroll 0 0;
   content: "";
   display: inline-block;
   height: 2px;
@@ -3246,7 +3248,7 @@ width: 44px;
     color: #777777;
 }
 a.appintment-button {
-  background: #b89b5e none repeat scroll 0 0;
+  background: #deb887 none repeat scroll 0 0;
   bottom: -46px;
   color: #ffffff;
   display: block;
@@ -3298,7 +3300,7 @@ a.appintment-button {
   overflow: hidden;
 }
 .education-list-left h1 {
-  color: #b89b5e;
+  color: #deb887;
   font-size: 35px;
   font-style:italic;
   font-family: "PT Serif",sans-serif;
@@ -3344,7 +3346,7 @@ a.appintment-button {
   background-image:none;
 }
 .progress-bar-primary {
-  background-color: #b89b5e;
+  background-color: #deb887;
 }
 .progress-bar {
   border-radius: 10px 0 0 10px;
@@ -3451,7 +3453,7 @@ span.progress-bar-tooltip {
   line-height: 42px;
 }
 .leave-comment-form button[type="submit"] .fa {
-  color: #B89B5E;
+  color: #deb887;
   font-size: 14px;
   border-left: 1px solid #424242;
   padding-left: 15px;
@@ -3463,7 +3465,7 @@ span.progress-bar-tooltip {
 }
 
 .leave-comment-form button[type="submit"]:hover {
-  background: #B89B5E;
+  background: #deb887;
   color: #1f1f1f;
 }
 
@@ -3507,7 +3509,7 @@ header.stricky-fixed .mainmenu .nav-holder > ul > li > a {
   /*color: #242424;*/
 }
 header.stricky-fixed .mainmenu .nav-holder > ul > li > a:hover {
-  color: #B89B5E;
+  color: #deb887;
 }
 header.stricky-fixed .mainmenu .nav-holder > ul > li.dropdown > a:after {
  /*color: #242424; */
@@ -3549,7 +3551,7 @@ header .search-box input {
 }
 header .search-box button {
   width: 40px;
-  background: #B89B5E;
+  background: #deb887;
   border: none;
   outline: none;
   height: 40px;
@@ -3607,15 +3609,15 @@ header .search-box button {
 
 .mainmenu .nav-holder > ul > li.dropdown:hover > a:after,
 .mainmenu .nav-holder > ul > li.dropdown.current > a:after {
-  color: #B89B5E;
+  color: #deb887;
 }
 .home-header .mainmenu .nav-holder > ul > li.dropdown:hover > a:after,
 .home-header .mainmenu .nav-holder > ul > li.dropdown.current > a:after {
-  color: #B89B5E;
+  color: #deb887;
 }
 .stricky-fixed .mainmenu .nav-holder > ul > li.dropdown:hover > a:after,
 .stricky-fixed .mainmenu .nav-holder > ul > li.dropdown.current > a:after {
-  color: #B89B5E;
+  color: #deb887;
 }
 .mainmenu .nav-holder > ul > li > ul {
   position: absolute;
@@ -3653,7 +3655,7 @@ header .search-box button {
   -o-transition: all 0.5s ease;
 }
 .mainmenu .nav-holder > ul > li > ul > li:hover:before {
-  color: #B89B5E;
+  color: #deb887;
 }
 .mainmenu .nav-holder > ul > li > ul > li > a {
   color: #828282;
@@ -3669,7 +3671,7 @@ header .search-box button {
   transition: all .3s ease;
 }
 .mainmenu .nav-holder > ul > li > ul > li > a:hover {
-  color: #B89B5E;
+  color: #deb887;
 }
 .mainmenu .nav-holder > ul > li > ul > li:hover {
   overflow: visible;
@@ -3689,7 +3691,7 @@ header .search-box button {
   right: 200%;
 }
 .mainmenu .nav-holder > ul > li > ul > li > ul > li > a:hover {
-  color: #B89B5E;
+  color: #deb887;
 }
 .mainmenu .nav-holder > ul > li > ul.right-align {
   left: auto;
@@ -3735,7 +3737,7 @@ header .search-box button {
   -o-transition: all 0.5s ease;
 }
 .mainmenu .nav-holder > ul > li > ul > li > ul > li:hover:before {
-  color: #B89B5E;
+  color: #deb887;
 }
 .mainmenu .nav-holder > ul > li > ul > li > ul > li > a {
   color: #828282;
@@ -3751,7 +3753,7 @@ header .search-box button {
   transition: all .3s ease;
 }
 .mainmenu .nav-holder > ul > li > ul > li > a:hover {
-  color: #B89B5E;
+  color: #deb887;
 }
 
 
@@ -3801,7 +3803,7 @@ header .search-box button {
   transition: all .3s ease;
 }
 .mainmenu .nav-holder > ul > li:hover > a {
-  color: #B89B5E;
+  color: #deb887;
 }
 .mainmenu .nav-expander > ul {  
   font-size: 0;
@@ -3848,7 +3850,7 @@ header .search-box button {
   font-weight: 800;
 }
 #banner .slider-2 .caption-1 h1{
-  color: #B89B5E;
+  color: #deb887;
 }
 #banner .caption-2 h1{
   color: #ffffff;
@@ -3993,7 +3995,7 @@ header .search-box button {
   z-index: 9999;
 }
 .call-to-action-area .container {
-  /*background: #B89B5E;*/
+  /*background: #deb887;*/
     background: red;
   padding: 18px 0px;
 }
@@ -4053,10 +4055,10 @@ header .search-box button {
 /* our attorney area home styles */
 
 #our-attorneys-area.home .single-attorney .attorney-name {
-  background: #C6A561;
+  background: #deb887;
 }
 #our-attorneys-area.home .single-attorney:hover .attorney-name {
-  background: #B89B5E;
+  background: #deb887;
 }
 #our-attorneys-area.home .attorney-name h5 {
   color: #fff;
