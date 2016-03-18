@@ -1424,6 +1424,15 @@ css:
   margin-top: 38px;
   text-transform: uppercase;
 }
+.single-featured-item .featured-text h4 a{
+    color: #3e3e3e;
+    font-family: "Raleway",sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    margin-top: 38px;
+    text-transform: uppercase;
+}
 .single-featured-item .featured-text p{
   font-family: "Open Sans",sans-serif;
 }
@@ -1432,6 +1441,9 @@ css:
   color: #fff;
 }
 .single-featured-item:hover .featured-text h4 {
+  color: #deb887;
+}
+.single-featured-item:hover .featured-text h4 a{
   color: #deb887;
 }
 /*End Featured service area 2 css */
