@@ -4043,6 +4043,7 @@ header .search-box button {
   text-transform: uppercase;
   color: #271313;
   color: #fff;
+  padding-top: 1%;
 }
 .call-to-action-area .text-one h3 .number {
   font-family: 'Open Sans';
