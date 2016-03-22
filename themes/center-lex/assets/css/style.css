@@ -264,7 +264,7 @@ p {
 
 /*Start Breadcrumb area css */
 .breadcrumb-area {
-  background: rgba(0, 0, 0, 0) url("../img/breadcrumb-bg.jpg") no-repeat;
+  background: rgba(0, 0, 0, 0) url("../img/breadcrumb-bg.jpeg") no-repeat;
   background-position: center;
   background-size:cover;
   position: relative;
@@ -703,6 +703,9 @@ css:
 .case-evaluation-image {
   position: relative;
 }
+.case-evaluation-image h2{
+    color: white;
+}
 .case-evaluation-image:before {
   content: '';
   width: 2000px;
@@ -710,7 +713,7 @@ css:
   position: absolute;
   top: 0;
   left: 200%;
-  background: #deb887;
+  /*background: #deb887;*/
   display: block;
   opacity: .65;
   transition: all .3s ease;
@@ -4043,7 +4046,7 @@ header .search-box button {
 }
 .call-to-action-area .text-one h3 .number {
   font-family: 'Open Sans';
-  font-size: 28px;
+  font-size: 25px;
   color: #271313;
   color: #fff;
 }
